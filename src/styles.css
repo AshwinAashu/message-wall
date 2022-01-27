@@ -2,3 +2,29 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+:root {
+  --main-color: #007bff;
+  --sub-color: #7d7f80;
+  --btn-primary-color: #007bff;
+  --heading-color: #0a68cc;
+}
+
+.btn-primary {
+  background-color: var(--btn-primary-color);
+  outline: none;
+  color: #ccc;
+  border-radius: 50px;
+  height: 30px;
+  width: 60px;
+}
+
+/*feed header content css */
+.feed-header-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+#feed-header-span {
+  margin: 2%;
+}
