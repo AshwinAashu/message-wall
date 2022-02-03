@@ -7,6 +7,55 @@
   pointer-events: none;
 }
 
+:root {
+  --main-color: #007bff;
+  --sub-color: #7d7f80;
+  --btn-primary-color: #007bff;
+  --heading-color: #0a68cc;
+}
+
+.btn-primary {
+  background-color: var(--btn-primary-color);
+  outline: none;
+  color: #ccc;
+  border-radius: 50px;
+  height: 30px;
+  width: 60px;
+}
+
+/*feed header content css */
+.feed-header-content {
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+#feed-header-span {
+  margin: 2%;
+}
+
+
+/* Modal css */
+.newPostModal-container{
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  flex-direction: column;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 0;
+  margin:0;
+  height: 50vh;
+  width: 50vw;
+  max-height: 300px;
+  max-width: 500px;
+  box-shadow: 1px 0px 7px 3px #26282c; 
+}
+
+
+
+
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
