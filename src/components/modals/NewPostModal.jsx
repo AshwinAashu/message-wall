@@ -23,7 +23,7 @@ const NewPostModal = ({ showPostModal, setPosts, posts }) => {
     }
   
     // console.log(showPostModal);
-    console.log('we are in modal');
+    
     return (
       <div className="newPostModal-container">
         <div className="newPostModal-header">
