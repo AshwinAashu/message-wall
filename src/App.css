@@ -26,8 +26,8 @@
 /*feed header content css */
 .feed-header-content {
   /* display: flex;
-  justify-content: space-between; */
-}
+  justify-content: space-between;*/
+} 
 
 #feed-header-span {
   margin: 2%;
@@ -35,12 +35,24 @@
 
 
 /* Modal css */
+.modal-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 99999;
+}
 .newPostModal-container{
   display: flex; 
   justify-content: center;
   align-items: center; 
   flex-direction: column;
-  background-color: #f8f9fa;
+  background-color: rgb(255, 248, 248);
   border-radius: 10px;
   padding: 0;
   margin:0;

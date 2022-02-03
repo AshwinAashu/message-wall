@@ -2,17 +2,17 @@ import { useState } from 'react';
 
 
 
-const NewPostModal = ({ showPostModal, setPosts, posts }) => {
+const NewPostModal = ({ setPosts, posts, onClose }) => {
     const [postText, setPostText] = useState('');
 
-    if (!showPostModal) {
-      return null;
-    }
+    // if (!showPostModal) {
+    //   return null;
+    // }
     // close modal and discard post
     const handleCancel = () =>{
-      
+      onClose();
     }
-    // console.log(posts);
+    
     //set post text
     const handleNewPostText = (e) =>{
       setPostText(e.target.value);
@@ -20,11 +20,13 @@ const NewPostModal = ({ showPostModal, setPosts, posts }) => {
     //set post text and GIF
     const handleNewPost = () =>{
       setPosts(...posts , postText);
+      onClose();
     }
   
-    // console.log(showPostModal);
+   
     
     return (
+      <div className="modal-container">
       <div className="newPostModal-container">
         <div className="newPostModal-header">
 
@@ -57,7 +59,8 @@ const NewPostModal = ({ showPostModal, setPosts, posts }) => {
           </div>
         </div>
       </div>
+      </div>
     );
-  };
-  export default NewPostModal;
+};
+export default NewPostModal;
   

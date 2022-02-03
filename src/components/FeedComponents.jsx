@@ -19,12 +19,22 @@ const FeedComponent = () => {
             + Post
           </button>
           {console.log(showPostModal)}
-          {showPostModal ?  <NewPostModal setPosts={setPosts} posts={posts} />: null}
+        
+          
         </div>
         <div className="feed-container">
+
+        {showPostModal ?  
+        <NewPostModal 
+          setPosts={setPosts} 
+          posts={posts} 
+          onClose={()=>setShowPostModal(false)} 
+          /> 
+          : console.log("abe yaar")}
+
           <div className="feed-post">
             <div className="feed-post-header">Name and Image</div>
-            <div className="feed-post-content"></div>
+            <div className="feed-post-content">{posts.map(item=> item)}</div>
           </div>
         </div>
       </div>
