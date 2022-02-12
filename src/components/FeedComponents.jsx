@@ -1,44 +1,51 @@
-import { useState } from "react";
+
+import React,  { useState } from 'react';
+import PostTemplate from './PostTemplate';
 import NewPostModal from "./modals/NewPostModal";
 const FeedComponent = () => {
-  const [posts, setPosts] = useState([]);
 
+  const [posts, setPosts] = useState([]);
 
   const [showPostModal, setShowPostModal] = useState(false);
   const handlePostModal = () => {
     setShowPostModal(true);
-    
   };
+
+  
+  // console.log("posts are", posts);
+
   return (
     <div className="feed-main">
       <div className="feed-header">
-          <span id="feed-header-span">Feed</span>
-        <div className="feed-header-content">
           
+        <div className="feed-header-content">
+          <h1 >Procyon</h1>
           <button className="btn-primary" onClick={handlePostModal}>
             + Post
           </button>
-          {console.log(showPostModal)}
-        
-          
         </div>
-        <div className="feed-container">
+        
+      </div>
+
+      <div className="feed-container">
 
         {showPostModal ?  
         <NewPostModal 
-          setPosts={setPosts} 
-          posts={posts} 
-          onClose={()=>setShowPostModal(false)} 
+          setPosts = { (postData) =>setPosts([...posts, postData])}
+          onClose={()=>{
+            setShowPostModal(false)
+            } }
           /> 
-          : console.log("abe yaar")}
+          :" " }
 
-          <div className="feed-post">
-            <div className="feed-post-header">Name and Image</div>
-            <div className="feed-post-content">{posts.map(item=> item)}</div>
+        <div className="feed-post">
+          <div className="feed-post-content">
+            <PostTemplate posts={posts} />
           </div>
         </div>
       </div>
     </div>
+  
   );
 };
 export default FeedComponent;

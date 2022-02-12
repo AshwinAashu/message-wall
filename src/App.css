@@ -9,29 +9,34 @@
 
 :root {
   --main-color: #007bff;
-  --sub-color: #7d7f80;
-  --btn-primary-color: #007bff;
+  --sub-color: #000000;
+  /* --btn-primary-color: #007bff; */
   --heading-color: #0a68cc;
+  --btn-primary-color:#00ffee;
+  background-color: #0173e6;
 }
 
 .btn-primary {
   background-color: var(--btn-primary-color);
   outline: none;
-  color: #ccc;
+  border:none;
+  color: rgb(19, 18, 18);
   border-radius: 50px;
-  height: 30px;
-  width: 60px;
+  height: 2rem;
+  width: 5rem;
+  box-shadow: 2px 1px 5px #000;
+  cursor:pointer;
 }
 
 /*feed header content css */
 .feed-header-content {
-  /* display: flex;
-  justify-content: space-between;*/
+  display: flex;
+  justify-content: space-between;
+  margin: 2%;
+  color:rgb(255, 248, 248);
+  align-items: center;
 } 
 
-#feed-header-span {
-  margin: 2%;
-}
 
 
 /* Modal css */
@@ -48,8 +53,9 @@
   z-index: 99999;
 }
 .newPostModal-container{
-  display: flex; 
-  justify-content: center;
+  
+  display: grid;
+  justify-content: space-evenly;
   align-items: center; 
   flex-direction: column;
   background-color: rgb(255, 248, 248);
@@ -62,11 +68,56 @@
   max-width: 500px;
   box-shadow: 1px 0px 7px 3px #26282c; 
 }
+.newPostModal-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.newPostModal-controls{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
 
-
-
-
-
+.post-textbox{
+  min-width: 450px;
+  min-height: 200px;
+  border-radius:25px;
+  border: 1px  #26282c;
+  outline: none;
+  box-shadow: none;
+  background-color: rgb(228, 215, 215);
+  resize: none;
+  padding: 10px;
+  
+}
+/*feed post*/
+.feed-post-content{
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2%;
+  
+  width: 40%;
+  border-radius: 10px; */
+}
+.post-template-header{
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  margin: 2%;
+  width: 50%;
+  border-radius: 10px;
+  background-color:rgb(255, 255, 255);
+  padding: 20px;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -84,6 +135,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 
 .App-link {
   color: #61dafb;
